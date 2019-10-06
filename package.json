@@ -1,0 +1,21 @@
+{
+  "name": "@belcoder/angular-search",
+  "version": "1.0.2",
+  "description": "Компонент поиска",
+  "license": "MIT",
+  "repository": "belcoder/angular-search",
+  "keywords": [
+    "npm",
+    "package",
+    "belcoder"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "scripts": {
+    "search:build": "ng build search",
+    "search:watch": "ng build search --watch",
+    "search:publish": "npm run search:build && cd dist/search && npm pack npm publish"
+  }
+}
