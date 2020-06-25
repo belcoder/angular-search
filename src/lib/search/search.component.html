@@ -1,6 +1,7 @@
 <div class="nika-search" [style.marginBottom.px]="mb">
   <input id="input-{{componentId}}" type="text"
          class="nika-search-input"
+         autocapitalize="none"
          (keyup.enter)="submit()"
          [(ngModel)]="value"
          (ngModelChange)="onChangeValue()"
@@ -10,8 +11,9 @@
     <span class="mdi mdi-magnify mdi-24px"></span>
   </div>
 
-  <div class="nika-search-ico-actions" *ngIf="value">
-    <span class="mdi mdi-subdirectory-arrow-left mdi-24px" (click)="submit()" [hidden]="isLive"></span>
-    <span class="mdi mdi-close mdi-24px" (click)="clear()"></span>
+  <div class="nika-search-ico-actions">
+    <span class="mdi mdi-subdirectory-arrow-left mdi-24px" (click)="submit()" [hidden]="isLive" *ngIf="value"></span>
+    <span class="mdi mdi-close mdi-24px" (click)="clear()" *ngIf="value"></span>
+    <span class="mdi mdi-24px" [ngClass]="'mdi-' + customFirstIco" *ngIf="customFirstIco"></span>
   </div>
 </div>

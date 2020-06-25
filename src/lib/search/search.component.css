@@ -39,12 +39,16 @@
 	color: #adadb3;
 	cursor: pointer;
 	transition: all 150ms;
+	margin-right: 10px;
+}
+.nika-search-ico-actions span:last-child {
+	margin-right: 0;
 }
 
 .nika-search-ico-actions span:hover {
 	color: #6b6b77;
 }
 
-.nika-search-ico-actions span:nth-child(1) {
+.nika-search-ico-actions-filter {
 	margin-right: 10px;
 }
